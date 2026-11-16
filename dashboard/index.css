@@ -1,0 +1,168 @@
+:root {
+    --bg: #f5f7fa;
+    --card: #ffffff;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --line: #e5e7eb;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, Segoe UI, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 24px;
+    background: var(--card);
+    border-bottom: 1px solid var(--line);
+}
+
+h1 {
+    font-size: 20px;
+    margin: 0;
+}
+
+h2 {
+    font-size: 16px;
+    margin: 0 0 8px;
+}
+
+main {
+    padding: 20px 24px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.badge {
+    padding: 4px 14px;
+    border-radius: 999px;
+    font-weight: 600;
+    color: #fff;
+    background: var(--muted);
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.badge.ok {
+    background: #16a34a;
+}
+
+.badge.warn {
+    background: #d97706;
+}
+
+.badge.critical {
+    background: #dc2626;
+}
+
+.range {
+    margin-left: auto;
+}
+
+.range button {
+    border: 1px solid var(--line);
+    background: var(--card);
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.range button:first-child {
+    border-radius: 6px 0 0 6px;
+}
+
+.range button:last-child {
+    border-radius: 0 6px 6px 0;
+}
+
+.range button.active {
+    background: #2563eb;
+    color: #fff;
+    border-color: #2563eb;
+}
+
+.charts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.card,
+section>table {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+}
+
+.card {
+    padding: 12px;
+}
+
+.card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 6px;
+}
+
+.card h3 {
+    font-size: 13px;
+    margin: 0;
+    color: var(--text);
+    font-weight: 600;
+}
+
+.card .sub {
+    font-size: 11px;
+    color: var(--muted);
+}
+
+.card canvas {
+    height: 200px !important;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 6px 10px;
+    border-bottom: 1px solid var(--line);
+}
+
+th {
+    color: var(--muted);
+    font-weight: 600;
+}
+
+.sev-critical {
+    color: #dc2626;
+    font-weight: 600;
+}
+
+.sev-warn {
+    color: #d97706;
+    font-weight: 600;
+}
+
+.empty {
+    padding: 10px;
+    color: var(--muted);
+}

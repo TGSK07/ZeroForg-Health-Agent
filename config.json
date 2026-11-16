@@ -1,0 +1,11 @@
+{
+  "watchlist": [
+    "nginx",
+    "sshd"
+  ],
+  "dns_host": "example.com",
+  "tcp_port": 443,
+  "internet_host": "1.1.1.1",
+  "gateway": "",
+  "api_url": "https://example.com"
+}
