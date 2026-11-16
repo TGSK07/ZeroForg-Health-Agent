@@ -4,7 +4,7 @@ A lightweight single-process Python health agent designed for remote edge device
 
 ---
 
-## 📸 Dashboard Preview
+## Dashboard Preview
 
 ### System Normal (`OK`)
 ![Dashboard OK](assests/Dashboard_OK.png)
@@ -17,7 +17,7 @@ A lightweight single-process Python health agent designed for remote edge device
 
 ---
 
-## ⚡ Quick Start
+## Quick Start
 
 ### 1. Installation
 ```bash
@@ -40,7 +40,7 @@ python -m pytest -q
 
 ---
 
-## ⚙️ Architecture & Features
+## Architecture & Features
 
 * **System & Process Sampler (every 5s):**
   * Per-core CPU, Total CPU, RAM, Swap, Mount-level Disk %, Disk I/O rates, Network bandwidth rates (handles counter resets cleanly).
@@ -54,7 +54,7 @@ python -m pytest -q
 
 ---
 
-## 🚨 Alert Rules
+## Alert Rules
 
 | Rule | Trigger Condition | Clear Condition |
 | :--- | :--- | :--- |
@@ -68,7 +68,7 @@ python -m pytest -q
 
 ---
 
-## 📡 API Endpoints
+## API Endpoints
 
 * `GET /health` – System status badge (`ok` / `warn` / `critical`) & active alerts.
 * `GET /metrics?name=cpu_total&since=1h` – Historical metric timeseries.
@@ -76,14 +76,3 @@ python -m pytest -q
 * `GET /processes?sort=cpu` – Real-time snapshot of top running processes.
 
 ---
-
-## 🧪 Quick Demo Simulations
-
-* **CPU Stress (60s test):**
-  ```powershell
-  1..$env:NUMBER_OF_PROCESSORS | ForEach-Object { Start-Job { while($true){} } }; Start-Sleep 70; Get-Job | Remove-Job -Force
-  ```
-* **Watchlist Process Death:**
-  Add `"notepad.exe"` (or `"sleep"`) to `config.json` `"watchlist"`, launch it, and run `Stop-Process -Name notepad -Force`. Alert fires immediately.
-* **Network Disconnect:**
-  Disconnect network or configure invalid IP in `config.json`. Fires after 3 failed probes (45s).
