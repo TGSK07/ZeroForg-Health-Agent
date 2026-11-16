@@ -22,7 +22,6 @@ A lightweight single-process Python health agent designed for remote edge device
 ### 1. Installation
 ```bash
 python -m venv .venv
-# Windows: .venv\Scripts\activate | Linux: source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
@@ -40,7 +39,7 @@ python -m pytest -q
 
 ---
 
-## Architecture & Features
+## Features
 
 * **System & Process Sampler (every 5s):**
   * Per-core CPU, Total CPU, RAM, Swap, Mount-level Disk %, Disk I/O rates, Network bandwidth rates (handles counter resets cleanly).
