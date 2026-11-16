@@ -17,25 +17,29 @@ A lightweight single-process Python health agent designed for remote edge device
 
 ---
 
-## Quick Start
+## ⚡ Quick Start
 
-### 1. Installation
 ```bash
+# 1. Clone & navigate into repo
+git clone https://github.com/<your-username>/ZeroForg.git
+cd ZeroForg
+
+# 2. Set up virtual environment
 python -m venv .venv
-pip install -r requirements.txt
-```
+# Windows:
+.venv\Scripts\activate
+# Linux/macOS:
+source .venv/bin/activate
 
-### 2. Run the Agent
-```bash
-uvicorn app.main:app --host 0.0.0.0 --port 8000
+# 3. Install dependencies
+pip install -r requirements.txt
+
+# 4. Run agent & dashboard
+uvicorn app.main:app --port 8000
 ```
 * **Dashboard:** http://localhost:8000/
 * **API Docs:** http://localhost:8000/docs
-
-### 3. Run Tests
-```bash
-python -m pytest -q
-```
+* **Run Tests:** `pytest -q`
 
 ---
 
