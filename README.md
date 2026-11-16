@@ -17,12 +17,12 @@ A lightweight single-process Python health agent designed for remote edge device
 
 ---
 
-## ⚡ Quick Start
+## Quick Start
 
 ```bash
 # 1. Clone & navigate into repo
-git clone https://github.com/<your-username>/ZeroForg.git
-cd ZeroForg
+https://github.com/TGSK07/ZeroForg-Health-Agent.git
+cd ZeroForg-Health-Agent
 
 # 2. Set up virtual environment
 python -m venv .venv
